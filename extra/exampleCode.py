@@ -21,17 +21,15 @@ ONLY LEARNING PURPOSE
 import os
 from collections import defaultdict
 from datetime import datetime
-
 import requests
-
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")   # Or paste your token string here directly
-USERNAME = "your_github_username"          # Replace with your GitHub username
-YEAR = 2025                                # The year you want to highlight
+USERNAME = os.getenv("USERNAME")          # Replace with your GitHub username
+YEAR = 2026                               # The year you want to highlight
 
 GRAPHQL_URL = "https://api.github.com/graphql"
 HEADERS = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
@@ -99,7 +97,7 @@ def fetch_github_data(username: str, year: int) -> dict:
     data = response.json()
     if "errors" in data:
         raise Exception(f"GraphQL errors: {data['errors']}")
-
+    print(data)
     return data["data"]["user"]["contributionsCollection"]
 
 
@@ -160,6 +158,7 @@ def print_wrapped_summary(data: dict, username: str, year: int) -> None:
 
     # --- Time-based analysis --------------------------------------------
     weeks = data["contributionCalendar"]["weeks"]
+    #print(weeks)
     monthly_contributions, max_single_day_commits, best_day_label = get_monthly_breakdown(weeks)
     busiest_month, busiest_month_count = get_busiest_month(monthly_contributions)
 

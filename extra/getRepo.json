@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "user": {
+        "repositories": {
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOnYyOpHOTydjSA=="
+          },
+          "nodes": [
+            {
+              "nameWithOwner": "tragic23/StoriesToShare",
+              "isPrivate": false
+            },
+            {
+              "nameWithOwner": "tragic23/java-demo",
+              "isPrivate": false
+            },
+            {
+              "nameWithOwner": "tragic23/30-Days-Of-Python",
+              "isPrivate": false
+            },
+            {
+              "nameWithOwner": "tragic23/git-end-of-year-highlight",
+              "isPrivate": true
+            },
+            {
+              "nameWithOwner": "tragic23/matrix-display-script",
+              "isPrivate": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "repositories": [
+    {
+      "nameWithOwner": "tragic23/StoriesToShare",
+      "isPrivate": false
+    },
+    {
+      "nameWithOwner": "tragic23/java-demo",
+      "isPrivate": false
+    },
+    {
+      "nameWithOwner": "tragic23/30-Days-Of-Python",
+      "isPrivate": false
+    },
+    {
+      "nameWithOwner": "tragic23/git-end-of-year-highlight",
+      "isPrivate": true
+    },
+    {
+      "nameWithOwner": "tragic23/matrix-display-script",
+      "isPrivate": false
+    }
+  ]
+}
